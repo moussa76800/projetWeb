@@ -2,14 +2,14 @@
 
 $serverName="localhost";
 $dbUsername="root";
-$dbPassword="";
+$dbPassword="lili";
 $dbName="projetWeb";
 
-$connect=mysql_connect($serverName,$dbUsername, $dbPassword ,$dbName);
+$connect=mysqli_connect($serverName,$dbUsername, $dbPassword ,$dbName);
 
 if (! $connect) {
 
-    die("Connection failed !!".mysql_connect.error());
+    die("Connection failed !! :" . mysqli_connect_error());
 }
 
 

@@ -43,8 +43,8 @@ function pswdMatch($password,$passwordRepeat) {
 function pseudoExist($connect,$pseudo,$email) {
 $email
 $sql= "SELECT * FROM  users WHERE pseudo = ? OR email = ?; " ;
-$stmt= mysql_stmt_init($connect);
-if (! mysql_stmt_prepare($stmt,$sql)) {
+$stmt= mysqli_stmt_init($connect);
+if (! mysqli_stmt_prepare($stmt,$sql)) {
     header("location: ../inscription.php?error=pseudoExist");
     exit();
 }
@@ -52,30 +52,30 @@ if (! mysql_stmt_prepare($stmt,$sql)) {
  mysql_stmt_param($stmt,"ss",$pseudo,$email);
  mysql_stmt_execute($stmt);
  
- $resultData = mysql_stmt_get_result($stmt);
- if($row=mysql_fetch_assoc($resultData)) {
+ $resultData = mysqli_stmt_get_result($stmt);
+ if($row=mysqli_fetch_assoc($resultData)) {
   return $row;
  }else {
 
      $result=false;
      return $result;
  }
- mysql_stmt_close($stmt);
+ mysqli_stmt_close($stmt);
 
  function createUser($connect,$nom,$prenom,$adresse,$dateDeNaissance,$email,$pseudo,$password) {
     $email
     $sql= "INSERT INTO users (nom,prenom,adresse,dateDeNaissance,email,pseudo,password) VALUES (?,?,?,?,?,?,?);" ;
-    $stmt= mysql_stmt_init($connect);
-    if (! mysql_stmt_prepare($stmt,$sql)) {
+    $stmt= mysqli_stmt_init($connect);
+    if (! mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../inscription.php?error=stmtfailed");
         exit();
     }
     
     $hashedPswd= password_hash($password,PASSWORD_DEFAULT);
 
-     mysql_stmt_param($stmt,"sssssss",$pseudo,$email);
-     mysql_stmt_execute($stmt);
-     mysql_stmt_close($stmt);
+     mysqli_stmt_param($stmt,"sssssss",$pseudo,$email);
+     mysqil_stmt_execute($stmt);
+     mysqli_stmt_close($stmt);
      header("vous etes diriger :../inscription.php?error=notcreate");
      exit();
      }
