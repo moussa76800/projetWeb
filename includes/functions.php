@@ -2,8 +2,8 @@
 
 function emptyInputSignup($nom,$prenom,$adresse,$codePostal,$dateDeNaissance,$email,$pseudo,$password,$passwordRepeat) {
 $result;
-if (empty($nom) || empty($prenom) || empty($adresse) || empty($codePostal) || empty($dateDeNaissance) || empty($email) || empty($pseudo) || empty($password) || empty($passwordRepeat) );
-$result=true;
+if (empty($nom) || empty($prenom) || empty($adresse) || empty($codePostal) || empty($dateDeNaissance) || empty($email) || empty($pseudo) || empty($password) || empty($passwordRepeat) ){
+    $result=true;
 }else {
    $result=false; 
 }
@@ -41,8 +41,8 @@ function pswdMatch($password,$passwordRepeat) {
 }
 
 function pseudoExist($connect,$pseudo,$email) {
-$email
-$sql= "SELECT * FROM  users WHERE pseudo = ? OR email = ?; " ;
+$email;
+$sql= "SELECT * FROM  users WHERE pseudo = ?; " ;
 $stmt= mysqli_stmt_init($connect);
 if (! mysqli_stmt_prepare($stmt,$sql)) {
     header("location: ../inscription.php?error=pseudoExist");
@@ -61,10 +61,11 @@ if (! mysqli_stmt_prepare($stmt,$sql)) {
      return $result;
  }
  mysqli_stmt_close($stmt);
+}
 
  function createUser($connect,$nom,$prenom,$adresse,$dateDeNaissance,$email,$pseudo,$password) {
-    $email
-    $sql= "INSERT INTO users (nom,prenom,adresse,dateDeNaissance,email,pseudo,password) VALUES (?,?,?,?,?,?,?);" ;
+    $email;
+    $sql= "INSERT INTO users (nom,prenom,adresse,dateDeNaissance,email,pseudo,passwd) VALUES (?,?,?,?,?,?,?);" ;
     $stmt= mysqli_stmt_init($connect);
     if (! mysqli_stmt_prepare($stmt,$sql)) {
         header("location: ../inscription.php?error=stmtfailed");
@@ -78,7 +79,7 @@ if (! mysqli_stmt_prepare($stmt,$sql)) {
      mysqli_stmt_close($stmt);
      header("vous etes diriger :../inscription.php?error=notcreate");
      exit();
-     }
+}
 
 
 

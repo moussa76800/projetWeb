@@ -2,8 +2,8 @@
 
 $serverName="localhost";
 $dbUsername="root";
-$dbPassword="lili";
-$dbName="projetWeb";
+$dbPassword="";
+$dbName="webmoussa";
 
 $connect=mysqli_connect($serverName,$dbUsername, $dbPassword ,$dbName);
 

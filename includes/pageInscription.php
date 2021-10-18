@@ -3,13 +3,14 @@
 if(isset($_POST["submit"])){
     $nom=$_POST["nom"];
     $prenom=$_POST["prenom"];
-    $adresse=$_POST["adresse"];
-    $codePostal=$_POST["codepostal"];
-    $dateDeNaissance=$_POST["datedenaissance"];
+    //$adresse=$_POST["adresse"];
+    //$codePostal=$_POST["codepostal"];
+    //$dateDeNaissance=$_POST["datedenaissance"];
     $email=$_POST["email"];
     $pseudo=$_POST["pseudo"];
     $password=$_POST["pswd"];
     $passwordRepeat=$_POST["pswdrepeat"];
+
 
 require_once 'dbh.php';
 require_once 'functions.php';
