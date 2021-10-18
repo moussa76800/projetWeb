@@ -40,7 +40,7 @@ if (pseudoExist($connect,$pseudo,$email)!== false) {
     exit();
 }
 
-createUser($connect,$nom,$prenom,$adresse,$connect,$dateDeNaissance,$email,$pseudo,$password);
+createUser($connect,$nom,$prenom,$adresse,$dateDeNaissance,$email,$pseudo,$password);
                
 }else {
     header("vous etes diriger :../inscription.php");

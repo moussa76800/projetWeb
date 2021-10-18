@@ -2,7 +2,7 @@
 
 function emptyInputSignup($nom,$prenom,$adresse,$codePostal,$dateDeNaissance,$email,$pseudo,$password,$passwordRepeat) {
 $result;
-if (empty($nom) || empty($prenom) || empty($adresse) || empty($codePostal) || empty($dateDeNaissance) || empty($email) || empty($pseudo) || empty($password) || empty($passwordRepeat) ){
+if (empty($nom) || empty($prenom) || empty($adresse) || empty($codePostal) || empty($dateDeNaissance) || empty($email) || empty($pseudo) || empty($password) || empty($passwordRepeat)){
     $result=true;
 }else {
    $result=false; 
