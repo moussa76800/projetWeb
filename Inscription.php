@@ -1,27 +1,21 @@
 
 <?php
-session_start();
- 
+include_once'enTete.php';
 
-<!DOCTYPE html>
-<html>
-     <head>
-        <title>INSCRIPTION</title>
-        <meta charset="utf-8" />
-     </head>
+?>
 
-    <body>
+<section class "inscription-form">
     <h2>Inscription</h2>
-
-    <form action="inscription.php" method="POST">
-        <input type="text"placeholder ="Votre prenom"id = "prenom"name="prenom"/>
-        <input type="text"placeholder ="Votre nom"id=nom name="nom"/>
-        <input type="text"placeholder ="Votre pseudo"id="pseudo"  name="pseudo" />
-        <input type="text"placeholder ="Votre email"id="email" name="email" />
-        <input type="password"placeholder ="Votre mot de passe" id="login" name="login" />
-        <input type="password"placeholder ="Confirmez votre mot de passe"id="login1"  name="login1"/>
-        <input type="submit"name="envoi" value="valider"/>
+<div class = "inscription-form-form">
+    <form action="includes/pageIncription.php" method="post"><br>
+        <input type="text "name="prenom" placeholder="Votre prenom"><br>
+        <input type="text" name="nom" placeholder ="Votre nom"><br>
+        <input type="text" name="pseudo" placeholder ="Votre pseudo" ><br>
+        <input type="text" name="email" placeholder ="Votre email" ><br>
+        <input type="password" name="pswd" placeholder ="Votre mot de passe"><br>
+        <input type="password"  name="pswdrepeat" placeholder ="Confirmez votre mot de passe"><br>
+        <input type="submit"name="submit" value="S'inscrire"><br>
      </form> 
-   </body>
+</div>
+</section>
 
-</html>

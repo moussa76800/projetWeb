@@ -1,17 +1,22 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <title>Page protégée par mot de passe</title>
-    </head>
-    <body>
-   
-        <form action="PageConnexion.php" method="POST">
-            <p>
-            <input type="password" name="mot_de_passe" />
-            <input type="submit" value="Valider" />
-            </p>
-        </form>
+
+<?php
+include_once'enTete.php';
+
+?>
+
+<section class "inscription-form">
+    <h2>CONNEXION</h2>
+<div class = "connexion-form-form">
+    <form action="includes/pageConnection.php" method="post">
         
-    </body>
-</html>
+        <input type="text" name="pseudo" placeholder ="Votre pseudo"br >
+        <input type="text" name="email" placeholder ="Votre email" >
+        <input type="password" name="login" placeholder ="Votre mot de passe">
+        <input type="submit"name="submit" value="Se connecter">
+     </form> 
+</div>
+</section>
+
+<?php 
+include_once'piedDePage';
+?>
