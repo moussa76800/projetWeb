@@ -1,6 +1,27 @@
-body
+.header h1
 {
-  margin: 10px 0 ;
+    font-family: 'BallparkWeiner', serif;
+    font-size: 2.5em;
+    font-weight: normal;
+    margin: 0 0 0 10px;
+    color: blueviolet;
+}
+
+div  .header
+{font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+   color: coral;
+   background-attachment: fixed;
+   background-color: ;
+
+}
+
+
+
+
+
+body{
+
+}margin: 10px 0 ;
   padding: 0 ;
   text-align: center ;
   font: 0.8em "Trebuchet MS", helvetica, sans-serif ;

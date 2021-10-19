@@ -2,14 +2,9 @@
 
 <?PHP
 
-session_start();
-
-
-try{
-    $bdd = new PDO('mysql:host=localhost;dbname=membre;charset=utf8', 'root', '');
-    die('Erreur : ' . $e->getMessage());
+require_once 'dbh.php';
 }
-     $req = $db->query('SELECT * FROM prenom');
+     $req = $connect->query('SELECT * FROM prenom');
 ?>
 
 <!DOCTYPE html>

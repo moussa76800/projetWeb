@@ -16,7 +16,3 @@ include_once'enTete.php';
      </form> 
 </div>
 </section>
-
-<?php 
-include_once'piedDePage';
-?>
